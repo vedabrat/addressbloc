@@ -7,18 +7,17 @@ class AddressBook
     @entries = []
   end
 
-
    def add_entry(name, phone_number, email)
-     # #9
+     # create an index for each entry, iterate through entries. if the name is already in the entries list, dont add.
+     # for each entry let there be an index
+     # insert the new entry
     index = 0
     entries.each do |entry|
-    # #10
       if name < entry.name
         break
       end
       index+= 1
     end
-     # #11
     entries.insert(index, Entry.new(name, phone_number, email))
   end
 
